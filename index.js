@@ -56,5 +56,38 @@
 //     return days[date.getDay()]
 // }
 // console.log(getDayName(3/16/2024))
-const getDayNameTwo = day => new Date(day).toLocaleDateString('en-us', {weekday: 'long'})
-console.log(getDayNameTwo("2024-03-26"))
+// // ES6
+// const getDayNameTwo = day => new Date(day).toLocaleDateString('en-us', {weekday: 'long'})
+// console.log(getDayNameTwo("2024-03-26"))
+
+// // Create a function that can take a flat array and change it to a nest arrays to represent a incremental depth level.
+
+
+// //Ex nestArray([1,2,6,3]) -> [1[2[6[3]]]]
+
+// function nestArray(arr) {
+//     if(arr.length == 1) return arr
+//     let temp = []
+//     for(let i =0; i < arr.length; i++) temp.push(arr[i])
+//     return [arr[0], nestArray(temp)]
+// }
+// // console.log(nestArray([1,2,6,3]))
+// const nestArray2 = arr => arr.length === 1 ? arr : [arr[0], nestArray2(arr.slice(1))]
+// console.log(nestArray2([1,2, 3]))
+
+//Create a function that takes two dates and return the number of days between the first and second dadte
+/* getNumbers(
+    new Date("March 26 2024")
+    new Date("March 30 2024")
+
+    ) */
+
+    //output -> 4days
+    // ES6 (provide inline commets for the code)
+   const getDays = (date1, date2) => {
+        return new Date(date2 - date1).getDate() -1
+}
+console.log(getDays(
+    new Date("March 26 2024"),
+    new Date("March 30 2024")
+))
