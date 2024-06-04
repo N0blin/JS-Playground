@@ -68,3 +68,48 @@ console.log(temp + ' is even number')
 } else {
 console.log(temp + ' is odd number')
 }}
+
+// Write a function to rotate an array either left or right 
+// according to a nummber provided in the function
+
+/**
+ *  sampleArray([0,1,2,3,4,5,7,9], 2) -> [7,9,0,1,2,3,4,5]
+ */
+
+function rotatingArray(arr) {
+
+}
+
+// // Kayden
+// function rotateArray(arr, num) {
+//     let result = arr 
+//     for(let i = 0; i<num, i++) {
+//         let lastNumber = arr.pop()
+//         arr.unshift(lastNumber)
+//         result = arr
+//     }
+//     return result
+
+// }
+
+// console.log(rotateArray([1,2,3,4,5,6], 4))
+
+//ES6
+const arrRotate = (a, n) => [...a.slice(-n % a.length), ...a.slice(0, -n % a.length)]
+
+// Create a function that takes an array of values, remove all dupicatee values and return a new arry
+// in the same order as the old array (only string and number)
+
+// //Fred
+
+// function pushDuplicates(arr) {
+//     let uniqueNewArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (uniqueNewArr.indexOf(arr[i]) === -1) {
+//             uniqueNewArr.push(arr[i]);
+//         }
+//     }
+//     return uniqueNewArr;
+// }
+ 
+// console.log(pushDuplicates([1, 9, 3, 4, 5, 9, 3, 4, 5, "Ali", "Ali", true, true, false]));
